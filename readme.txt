@@ -140,10 +140,6 @@ Yes! Hidden fields are automatically disabled and won't trigger validation error
 
 The plugin is designed to work alongside other CF7 extensions. However, we recommend testing with your specific setup.
 
-= Is there a Pro version? =
-
-Currently, this is a free plugin with all features included. Future premium features may be considered based on user feedback.
-
 == Changelog ==
 
 = 1.0.0 - 2025-01-25 =
@@ -184,8 +180,8 @@ Initial release of Simple Conditional Fields for Contact Form 7. A fresh approac
 
 For support, feature requests, or bug reports:
 
-* **Documentation**: [Plugin Documentation](https://www.inrage.fr/plugins/simple-cf7-conditional)
 * **Support Forum**: [WordPress.org Support](https://wordpress.org/support/plugin/simple-cf7-conditional)
+* **GitHub Issues**: [Report bugs or request features](https://github.com/inrage/simple-cf7-conditional/issues)
 * **Contact**: contact@inrage.fr
 
 == Contributing ==
