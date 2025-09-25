@@ -18,6 +18,7 @@ function scf7c_uninstall_plugin() {
     global $wpdb;
 
     // Remove all post meta created by the plugin
+    // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Required for uninstall cleanup
     $wpdb->delete(
         $wpdb->postmeta,
         array('meta_key' => '_scf7c_conditions'),

@@ -85,17 +85,26 @@ class SimpleCF7Conditional_Frontend
 
         // Always load if there are CF7 forms with conditions in the database
         // This handles ACF field cases and dynamic loading
-        $forms_with_conditions = get_posts([
-            'post_type' => 'wpcf7_contact_form',
-            'meta_query' => [
-                [
-                    'key' => '_scf7c_conditions',
-                    'compare' => 'EXISTS'
-                ]
-            ],
-            'posts_per_page' => 1,
-            'fields' => 'ids'
-        ]);
+        $cache_key = 'scf7c_forms_with_conditions';
+        $forms_with_conditions = wp_cache_get($cache_key, 'scf7c');
+
+        if (false === $forms_with_conditions) {
+            // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query -- Cached query, optimized with posts_per_page=1
+            $forms_with_conditions = get_posts([
+                'post_type' => 'wpcf7_contact_form',
+                'meta_query' => [
+                    [
+                        'key' => '_scf7c_conditions',
+                        'compare' => 'EXISTS'
+                    ]
+                ],
+                'posts_per_page' => 1,
+                'fields' => 'ids'
+            ]);
+
+            // Cache for 1 hour
+            wp_cache_set($cache_key, $forms_with_conditions, 'scf7c', HOUR_IN_SECONDS);
+        }
 
         return !empty($forms_with_conditions);
     }

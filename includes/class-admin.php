@@ -26,6 +26,7 @@ class SimpleCF7Conditional_Admin
     public function enqueue_admin_scripts($hook_suffix)
     {
         // Read and sanitize admin page parameter (no nonce needed for GET parameters)
+        // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Reading URL parameter in admin context
         $page = isset($_GET['page']) ? sanitize_key($_GET['page']) : '';
 
         // Only load on CF7 edit pages
@@ -258,6 +259,7 @@ class SimpleCF7Conditional_Admin
     public function save_conditions($contact_form)
     {
         // Verify nonce
+        // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- wp_verify_nonce sanitizes internally
         $nonce = isset($_POST['_wpnonce']) ? wp_unslash($_POST['_wpnonce']) : '';
         if (!wp_verify_nonce($nonce, 'wpcf7-save-contact-form_' . $contact_form->id())) {
             return;
@@ -273,6 +275,7 @@ class SimpleCF7Conditional_Admin
         }
 
         $form_id = $contact_form->id();
+        // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Data is sanitized after json_decode
         $conditions_data = isset($_POST['scf7c_conditions_data']) ? wp_unslash($_POST['scf7c_conditions_data']) : '';
         $conditions = json_decode($conditions_data, true);
 
@@ -280,6 +283,9 @@ class SimpleCF7Conditional_Admin
             // Sanitize conditions before saving
             $sanitized_conditions = array_map([$this, 'sanitize_condition'], $conditions);
             update_post_meta($form_id, '_scf7c_conditions', $sanitized_conditions);
+
+            // Clear cache when conditions are updated
+            wp_cache_delete('scf7c_forms_with_conditions', 'scf7c');
         }
     }
 
