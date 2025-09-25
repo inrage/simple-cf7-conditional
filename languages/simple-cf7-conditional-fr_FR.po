@@ -1,9 +1,9 @@
-# Translation of Simple Conditional Fields for CF7 in French
+# Translation of Simple Conditional Fields for Contact Form 7 in French
 # Copyright (C) 2025 Pascal GAULT - inRage
 # This file is distributed under the GPL v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Simple Conditional Fields for CF7 1.0.0\n"
+"Project-Id-Version: Simple Conditional Fields for Contact Form 7 1.0.0\n"
 "Report-Msgid-Bugs-To: https://www.inrage.fr\n"
 "Last-Translator: Pascal GAULT <contact@inrage.fr>\n"
 "Language-Team: Pascal GAULT - inRage\n"
@@ -75,8 +75,8 @@ msgstr "%s nécessite que l'extension Contact Form 7 soit installée et activée
 
 #: simple-cf7-conditional.php:171
 #. Plugin Name of the plugin/theme
-msgid "Simple Conditional Fields for CF7"
-msgstr "Champs Conditionnels Simples pour CF7"
+msgid "Simple Conditional Fields for Contact Form 7"
+msgstr "Champs Conditionnels Simples pour Contact Form 7"
 
 #. Description of the plugin/theme
 msgid "A simple and intuitive plugin to add conditional fields to Contact Form 7 forms with visual interface."

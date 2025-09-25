@@ -1,6 +1,6 @@
-=== Simple Conditional Fields for CF7 ===
-Contributors: Pascal GAULT - inRage
-Author: Pascal GAULT - inRage
+=== Simple Conditional Fields for Contact Form 7 ===
+Contributors: inrage
+Author: inrage
 Website: https://www.inrage.fr
 Tags: contact form 7, forms, conditional fields, conditional logic, visual interface, groups
 Requires at least: 5.0
@@ -15,7 +15,7 @@ A simple and intuitive plugin to add conditional fields to Contact Form 7 forms 
 
 == Description ==
 
-**Simple Conditional Fields for CF7** adds powerful conditional logic to [Contact Form 7](https://wordpress.org/plugins/contact-form-7/) with an intuitive visual interface.
+**Simple Conditional Fields for Contact Form 7** adds powerful conditional logic to [Contact Form 7](https://wordpress.org/plugins/contact-form-7/) with an intuitive visual interface.
 
 Unlike other conditional field plugins, this one focuses on **simplicity and user experience** with:
 
@@ -70,14 +70,14 @@ Unlike other conditional field plugins, this one focuses on **simplicity and use
 * **Contact Form 7**: Required dependency
 * **Browsers**: All modern browsers
 
-Simple Conditional Fields for CF7 is an independent plugin. This plugin is not affiliated with or endorsed by the developers of Contact Form 7.
+Simple Conditional Fields for Contact Form 7 is an independent plugin. This plugin is not affiliated with or endorsed by the developers of Contact Form 7.
 
 == Installation ==
 
 = Automatic Installation =
 
 1. Go to your WordPress admin area and navigate to **Plugins > Add New**
-2. Search for "Simple Conditional Fields for CF7"
+2. Search for "Simple Conditional Fields for Contact Form 7"
 3. Click **Install Now** and then **Activate**
 4. Contact Form 7 will be installed automatically if not present
 
@@ -187,7 +187,7 @@ Currently, this is a free plugin with all features included. Future premium feat
 == Upgrade Notice ==
 
 = 1.0.0 =
-Initial release of Simple Conditional Fields for CF7. A fresh approach to conditional logic with visual interface and enhanced user experience.
+Initial release of Simple Conditional Fields for Contact Form 7. A fresh approach to conditional logic with visual interface and enhanced user experience.
 
 == Support ==
 
