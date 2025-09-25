@@ -9,7 +9,7 @@
  * Text Domain: simple-cf7-conditional
  * Domain Path: /languages
  * Requires at least: 5.0
- * Tested up to: 6.8.2
+ * Tested up to: 6.8
  * Requires PHP: 7.4
  * Requires Plugins: contact-form-7
  * License: GPL v2 or later
@@ -44,9 +44,6 @@ class SimpleCF7Conditional
      */
     public function init()
     {
-        // Load text domain for translations
-        $this->load_textdomain();
-
         // Check if Contact Form 7 is active
         if (!class_exists('WPCF7')) {
             add_action('admin_notices', [$this, 'cf7_missing_notice']);
@@ -58,23 +55,6 @@ class SimpleCF7Conditional
 
         // Initialize components
         $this->init_hooks();
-    }
-
-    /**
-     * Load text domain for translations
-     * Note: For WordPress.org hosted plugins, translations are automatically loaded
-     */
-    private function load_textdomain()
-    {
-        // WordPress.org automatically loads translations for hosted plugins
-        // This is kept for manual installations and development
-        if (!function_exists('wp_get_environment_type') || wp_get_environment_type() !== 'production') {
-            load_plugin_textdomain(
-                'simple-cf7-conditional',
-                false,
-                dirname(plugin_basename(SCF7C_PLUGIN_FILE)) . '/languages'
-            );
-        }
     }
 
     /**
