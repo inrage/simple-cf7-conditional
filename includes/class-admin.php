@@ -137,22 +137,22 @@ class SimpleCF7Conditional_Admin
         ?>
         <div class="scf7c-panel">
             <div class="scf7c-header">
-                <h2><?php _e('Simple Conditional Fields', 'simple-cf7-conditional'); ?></h2>
-                <p><?php _e('Create visual rules to show/hide groups of fields', 'simple-cf7-conditional'); ?></p>
+                <h2><?php esc_html_e('Simple Conditional Fields', 'simple-cf7-conditional'); ?></h2>
+                <p><?php esc_html_e('Create visual rules to show/hide groups of fields', 'simple-cf7-conditional'); ?></p>
             </div>
 
             <div class="scf7c-workspace">
                 <!-- Sidebar with available groups and fields -->
                 <div class="scf7c-sidebar">
-                    <h3><?php _e('Available Elements', 'simple-cf7-conditional'); ?></h3>
+                    <h3><?php esc_html_e('Available Elements', 'simple-cf7-conditional'); ?></h3>
 
                     <div class="scf7c-groups-list">
-                        <h4><?php _e('Groups', 'simple-cf7-conditional'); ?></h4>
+                        <h4><?php esc_html_e('Groups', 'simple-cf7-conditional'); ?></h4>
                         <div id="scf7c-available-groups"></div>
                     </div>
 
                     <div class="scf7c-fields-list">
-                        <h4><?php _e('Fields', 'simple-cf7-conditional'); ?></h4>
+                        <h4><?php esc_html_e('Fields', 'simple-cf7-conditional'); ?></h4>
                         <div id="scf7c-available-fields"></div>
                     </div>
                 </div>
@@ -160,17 +160,17 @@ class SimpleCF7Conditional_Admin
                 <!-- Main canvas -->
                 <div class="scf7c-canvas">
                     <div class="scf7c-canvas-header">
-                        <h3><?php _e('Conditional Rules', 'simple-cf7-conditional'); ?></h3>
+                        <h3><?php esc_html_e('Conditional Rules', 'simple-cf7-conditional'); ?></h3>
                         <button type="button" id="scf7c-add-rule" class="scf7c-btn-primary">
                             <span class="dashicons dashicons-plus-alt"></span>
-                            <?php _e('Add Rule', 'simple-cf7-conditional'); ?>
+                            <?php esc_html_e('Add Rule', 'simple-cf7-conditional'); ?>
                         </button>
                     </div>
 
                     <div id="scf7c-rules-container" class="scf7c-rules-area">
                         <div class="scf7c-empty-canvas">
                             <div class="scf7c-empty-icon">📋</div>
-                            <p><?php _e('No rules yet. Click "Add Rule" to get started.', 'simple-cf7-conditional'); ?></p>
+                            <p><?php esc_html_e('No rules yet. Click "Add Rule" to get started.', 'simple-cf7-conditional'); ?></p>
                         </div>
                     </div>
                 </div>

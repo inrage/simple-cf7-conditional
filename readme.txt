@@ -2,9 +2,9 @@
 Contributors: inrage
 Author: inrage
 Website: https://www.inrage.fr
-Tags: contact form 7, forms, conditional fields, conditional logic, visual interface, groups
+Tags: contact form 7, conditional logic, visual interface, groups, forms
 Requires at least: 5.0
-Tested up to: 6.8.2
+Tested up to: 6.8
 Requires PHP: 7.4
 Requires Plugins: contact-form-7
 Stable tag: 1.0.0
@@ -65,7 +65,7 @@ Unlike other conditional field plugins, this one focuses on **simplicity and use
 
 = Compatibility =
 
-* **WordPress**: 5.0+ (tested up to 6.8.2)
+* **WordPress**: 5.0+ (tested up to 6.8)
 * **PHP**: 7.4+
 * **Contact Form 7**: Required dependency
 * **Browsers**: All modern browsers
@@ -143,15 +143,6 @@ The plugin is designed to work alongside other CF7 extensions. However, we recom
 = Is there a Pro version? =
 
 Currently, this is a free plugin with all features included. Future premium features may be considered based on user feedback.
-
-== Screenshots ==
-
-1. **Visual Rule Builder** - Create conditional rules with an intuitive drag-and-drop interface
-2. **Real-time Field Detection** - Automatically scans your form as you edit
-3. **Enhanced Group Generator** - Improved tag generator with closing tags
-4. **Modern Admin Interface** - Clean, sidebar-based layout
-5. **Multiple Operators** - Various condition types for complex logic
-6. **Live Frontend** - Rules applied instantly without page refresh
 
 == Changelog ==
 

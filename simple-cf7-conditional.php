@@ -62,14 +62,19 @@ class SimpleCF7Conditional
 
     /**
      * Load text domain for translations
+     * Note: For WordPress.org hosted plugins, translations are automatically loaded
      */
     private function load_textdomain()
     {
-        load_plugin_textdomain(
-            'simple-cf7-conditional',
-            false,
-            dirname(plugin_basename(SCF7C_PLUGIN_FILE)) . '/languages'
-        );
+        // WordPress.org automatically loads translations for hosted plugins
+        // This is kept for manual installations and development
+        if (!function_exists('wp_get_environment_type') || wp_get_environment_type() !== 'production') {
+            load_plugin_textdomain(
+                'simple-cf7-conditional',
+                false,
+                dirname(plugin_basename(SCF7C_PLUGIN_FILE)) . '/languages'
+            );
+        }
     }
 
     /**
@@ -166,7 +171,9 @@ class SimpleCF7Conditional
             </div>
             <br class="clear" />
             <p class="description">
-                <label for="<?php echo esc_attr($args['content'] . '-values'); ?>"><?php echo sprintf(esc_html(__('To make fields inside this group conditional, wrap them like this: %s', 'simple-cf7-conditional')), '<br><code>' . esc_html('[group my-group]...[/group]') . '</code>'); ?></label>
+                <label for="<?php echo esc_attr($args['content'] . '-values'); ?>"><?php
+                    /* translators: %s: HTML code example showing group syntax */
+                    echo sprintf(esc_html(__('To make fields inside this group conditional, wrap them like this: %s', 'simple-cf7-conditional')), '<br><code>' . esc_html('[group my-group]...[/group]') . '</code>'); ?></label>
             </p>
         </div>
         <?php
