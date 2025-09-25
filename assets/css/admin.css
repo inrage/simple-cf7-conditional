@@ -1,0 +1,335 @@
+/**
+ * Modern Admin CSS for Simple Conditional Fields for CF7
+ * Author: Pascal GAULT - inRage
+ * Design: Sidebar + Canvas approach (unique interface)
+ */
+
+/* Main Panel */
+.scf7c-panel {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f8f9fa;
+    border: 1px solid #e1e5e9;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.scf7c-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 24px;
+    text-align: center;
+}
+
+.scf7c-header h2 {
+    margin: 0 0 8px 0;
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+}
+
+.scf7c-header p {
+    margin: 0;
+    opacity: 0.9;
+    font-size: 14px;
+}
+
+/* Workspace Layout */
+.scf7c-workspace {
+    display: flex;
+    min-height: 600px;
+    background: white;
+}
+
+/* Sidebar */
+.scf7c-sidebar {
+    width: 280px;
+    background: #f8f9fa;
+    border-right: 1px solid #e1e5e9;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.scf7c-sidebar h3 {
+    margin: 0 0 16px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.scf7c-sidebar h4 {
+    margin: 20px 0 8px 0;
+    font-size: 13px;
+    font-weight: 500;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Element Cards in Sidebar */
+.scf7c-element-card {
+    background: white;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 8px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Only groups are clickable */
+.scf7c-element-card[data-type="group"] {
+    cursor: pointer;
+}
+
+.scf7c-element-card[data-type="group"]:hover {
+    border-color: #667eea;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.15);
+    transform: translateY(-1px);
+}
+
+/* Fields are just informational */
+.scf7c-element-card:not([data-type="group"]) {
+    cursor: default;
+    opacity: 0.8;
+}
+
+.scf7c-element-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.scf7c-element-icon.group {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.scf7c-element-icon.field {
+    background: #f3e5f5;
+    color: #7b1fa2;
+}
+
+.scf7c-element-info {
+    flex: 1;
+}
+
+.scf7c-element-name {
+    font-weight: 500;
+    font-size: 13px;
+    color: #2c3e50;
+}
+
+.scf7c-element-type {
+    font-size: 11px;
+    color: #6c757d;
+    text-transform: uppercase;
+}
+
+/* Main Canvas */
+.scf7c-canvas {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.scf7c-canvas-header {
+    background: #f8f9fa;
+    border-bottom: 1px solid #e1e5e9;
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.scf7c-canvas-header h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.scf7c-btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.scf7c-btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.scf7c-btn-primary .dashicons {
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+}
+
+/* Rules Area */
+.scf7c-rules-area {
+    flex: 1;
+    padding: 24px;
+    overflow-y: auto;
+}
+
+.scf7c-empty-canvas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    color: #6c757d;
+    text-align: center;
+}
+
+.scf7c-empty-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+    opacity: 0.5;
+}
+
+/* Rule Cards */
+.scf7c-rule-card {
+    background: white;
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.scf7c-rule-card:hover {
+    border-color: #667eea;
+    box-shadow: 0 4px 20px rgba(102, 126, 234, 0.15);
+}
+
+.scf7c-rule-header {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 16px 20px;
+    border-bottom: 1px solid #e9ecef;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.scf7c-rule-title {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 14px;
+}
+
+.scf7c-rule-delete {
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(220, 53, 69, 0.2);
+}
+
+.scf7c-rule-delete:hover {
+    background: #c82333;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+}
+
+.scf7c-rule-body {
+    padding: 20px;
+}
+
+.scf7c-rule-section {
+    margin-bottom: 16px;
+}
+
+.scf7c-rule-label {
+    display: block;
+    font-weight: 500;
+    color: #495057;
+    margin-bottom: 6px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.scf7c-rule-control {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.scf7c-rule-control:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.25);
+}
+
+/* Visual Connections */
+.scf7c-connection-line {
+    position: absolute;
+    background: #667eea;
+    height: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .scf7c-workspace {
+        flex-direction: column;
+    }
+
+    .scf7c-sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #e1e5e9;
+    }
+}
+
+
+/* Drag & Drop States */
+.scf7c-dragging {
+    opacity: 0.5;
+    transform: rotate(5deg);
+}
+
+.scf7c-drop-zone {
+    border: 2px dashed #667eea;
+    background: rgba(102, 126, 234, 0.05);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    color: #667eea;
+    margin-bottom: 16px;
+}
+
+.scf7c-drop-zone.active {
+    background: rgba(102, 126, 234, 0.1);
+    border-style: solid;
+}
