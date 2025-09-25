@@ -25,7 +25,7 @@ class SimpleCF7Conditional_Admin
      */
     public function enqueue_admin_scripts($hook_suffix)
     {
-        // Validate and sanitize input
+        // Read and sanitize admin page parameter (no nonce needed for GET parameters)
         $page = isset($_GET['page']) ? sanitize_key($_GET['page']) : '';
 
         // Only load on CF7 edit pages
@@ -54,7 +54,9 @@ class SimpleCF7Conditional_Admin
         );
 
         // Localize script with form fields
+        // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Reading URL parameters in admin context
         if (isset($_GET['post'])) {
+            // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Reading URL parameters in admin context
             $form_id = isset($_GET['post']) ? absint($_GET['post']) : 0;
             if (!$form_id) {
                 return;
@@ -104,6 +106,7 @@ class SimpleCF7Conditional_Admin
     {
         if (current_user_can('wpcf7_edit_contact_forms')) {
             // Get current form ID and conditions count with validation
+            // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Reading URL parameters in admin context
             $form_id = isset($_GET['post']) ? absint($_GET['post']) : 0;
             $conditions_count = 0;
 
@@ -255,7 +258,8 @@ class SimpleCF7Conditional_Admin
     public function save_conditions($contact_form)
     {
         // Verify nonce
-        if (!isset($_POST['_wpnonce']) || !wp_verify_nonce($_POST['_wpnonce'], 'wpcf7-save-contact-form_' . $contact_form->id())) {
+        $nonce = isset($_POST['_wpnonce']) ? wp_unslash($_POST['_wpnonce']) : '';
+        if (!wp_verify_nonce($nonce, 'wpcf7-save-contact-form_' . $contact_form->id())) {
             return;
         }
 
@@ -269,7 +273,7 @@ class SimpleCF7Conditional_Admin
         }
 
         $form_id = $contact_form->id();
-        $conditions_data = wp_unslash($_POST['scf7c_conditions_data']);
+        $conditions_data = isset($_POST['scf7c_conditions_data']) ? wp_unslash($_POST['scf7c_conditions_data']) : '';
         $conditions = json_decode($conditions_data, true);
 
         if (json_last_error() === JSON_ERROR_NONE && is_array($conditions)) {
