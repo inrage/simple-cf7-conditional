@@ -1,0 +1,160 @@
+# Translation of Simple Conditional Fields for CF7 in French
+# Copyright (C) 2025 Pascal GAULT - inRage
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Simple Conditional Fields for CF7 1.0.0\n"
+"Report-Msgid-Bugs-To: https://www.inrage.fr\n"
+"Last-Translator: Pascal GAULT <contact@inrage.fr>\n"
+"Language-Team: Pascal GAULT - inRage\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-01-25 12:00+0000\n"
+"PO-Revision-Date: 2025-01-25 12:00+0000\n"
+"X-Generator: WordPress\n"
+"X-Domain: simple-cf7-conditional\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: includes/class-admin.php:82 includes/class-admin.php:105
+msgid "Simple Conditional Fields"
+msgstr "Champs Conditionnels Simples"
+
+#: includes/class-admin.php:106
+msgid "Create visual rules to show/hide groups of fields"
+msgstr "Créez des règles visuelles pour afficher/masquer des groupes de champs"
+
+#: includes/class-admin.php:112
+msgid "Available Elements"
+msgstr "Éléments Disponibles"
+
+#: includes/class-admin.php:115
+msgid "Groups"
+msgstr "Groupes"
+
+#: includes/class-admin.php:120
+msgid "Fields"
+msgstr "Champs"
+
+#: includes/class-admin.php:128
+msgid "Conditional Rules"
+msgstr "Règles Conditionnelles"
+
+#: includes/class-admin.php:131
+msgid "Add Rule"
+msgstr "Ajouter une Règle"
+
+#: includes/class-admin.php:138 includes/class-admin.php:64
+msgid "No rules yet. Click \"Add Rule\" to get started."
+msgstr "Aucune règle pour le moment. Cliquez sur \"Ajouter une Règle\" pour commencer."
+
+#: simple-cf7-conditional.php:98
+msgid "group"
+msgstr "groupe"
+
+#: simple-cf7-conditional.php:135
+msgid "Name"
+msgstr "Nom"
+
+#: simple-cf7-conditional.php:149
+msgid "Insert Tag"
+msgstr "Insérer le Tag"
+
+#: simple-cf7-conditional.php:191
+msgid "Please enter a group name"
+msgstr "Veuillez saisir un nom de groupe"
+
+#: simple-cf7-conditional.php:153
+msgid "To make fields inside this group conditional, wrap them like this: %s"
+msgstr "Pour rendre les champs de ce groupe conditionnels, entourez-les comme ceci : %s"
+
+#: simple-cf7-conditional.php:170
+msgid "%s requires Contact Form 7 plugin to be installed and activated."
+msgstr "%s nécessite que l'extension Contact Form 7 soit installée et activée."
+
+#: simple-cf7-conditional.php:171
+#. Plugin Name of the plugin/theme
+msgid "Simple Conditional Fields for CF7"
+msgstr "Champs Conditionnels Simples pour CF7"
+
+#. Description of the plugin/theme
+msgid "A simple and intuitive plugin to add conditional fields to Contact Form 7 forms with visual interface."
+msgstr "Une extension simple et intuitive pour ajouter des champs conditionnels aux formulaires Contact Form 7 avec une interface visuelle."
+
+#. Plugin URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "https://www.inrage.fr"
+msgstr "https://www.inrage.fr"
+
+#. Author of the plugin/theme
+msgid "Pascal GAULT - inRage"
+msgstr "Pascal GAULT - inRage"
+
+#: includes/class-admin.php:62
+msgid "Delete rule"
+msgstr "Supprimer la règle"
+
+#: includes/class-admin.php:65
+msgid "Conditional Rule"
+msgstr "Règle Conditionnelle"
+
+#: includes/class-admin.php:66
+msgid "Show Group"
+msgstr "Afficher le Groupe"
+
+#: includes/class-admin.php:67
+msgid "When Field"
+msgstr "Quand le Champ"
+
+#: includes/class-admin.php:68
+msgid "Condition"
+msgstr "Condition"
+
+#: includes/class-admin.php:69
+msgid "Value"
+msgstr "Valeur"
+
+#: includes/class-admin.php:70
+msgid "-- Select group --"
+msgstr "-- Sélectionner un groupe --"
+
+#: includes/class-admin.php:71
+msgid "-- Select field --"
+msgstr "-- Sélectionner un champ --"
+
+#: includes/class-admin.php:72
+msgid "Enter value..."
+msgstr "Saisir une valeur..."
+
+#: includes/class-admin.php:75
+msgid "equals"
+msgstr "égale"
+
+#: includes/class-admin.php:76
+msgid "not equals"
+msgstr "n'égale pas"
+
+#: includes/class-admin.php:77
+msgid "contains"
+msgstr "contient"
+
+#: includes/class-admin.php:78
+msgid "does not contain"
+msgstr "ne contient pas"
+
+#: includes/class-admin.php:79
+msgid "is empty"
+msgstr "est vide"
+
+#: includes/class-admin.php:80
+msgid "is not empty"
+msgstr "n'est pas vide"
+
+#: includes/class-admin.php:81
+msgid "greater than"
+msgstr "supérieur à"
+
+#: includes/class-admin.php:82
+msgid "less than"
+msgstr "inférieur à"
