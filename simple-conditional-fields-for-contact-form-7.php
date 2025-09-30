@@ -1,7 +1,6 @@
 <?php
 /**
  * Plugin Name: Simple Conditional Fields for Contact Form 7
- * Plugin URI: https://www.inrage.fr
  * Description: A simple and intuitive plugin to add conditional fields to Contact Form 7 forms with visual interface.
  * Version: 1.0.1
  * Author: Pascal GAULT - inRage
