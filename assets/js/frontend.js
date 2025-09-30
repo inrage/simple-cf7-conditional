@@ -93,8 +93,45 @@
                 return;
             }
 
+            const groupStates = {};
+
             conditions.forEach(condition => {
-                this.applyCondition($form, condition);
+                if (!condition || typeof condition !== 'object') {
+                    return;
+                }
+
+                const { show_field, if_field, operator, if_value } = condition;
+
+                if (!show_field || !if_field || !operator) {
+                    return;
+                }
+
+                const $ifField = this.getFieldElement($form, if_field);
+                if (!$ifField.length) {
+                    return;
+                }
+
+                const currentValue = this.getFieldValue($ifField);
+                const conditionMet = this.evaluateCondition(currentValue, operator, if_value);
+
+                if (!groupStates[show_field]) {
+                    groupStates[show_field] = false;
+                }
+
+                if (conditionMet) {
+                    groupStates[show_field] = true;
+                }
+            });
+
+            Object.keys(groupStates).forEach(fieldName => {
+                const $showField = this.getFieldElement($form, fieldName);
+                if ($showField.length) {
+                    if (groupStates[fieldName]) {
+                        this.showField($showField);
+                    } else {
+                        this.hideField($showField);
+                    }
+                }
             });
         },
 
