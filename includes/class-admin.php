@@ -70,28 +70,28 @@ class SimpleCF7Conditional_Admin
                     'fields' => $fields,
                     'conditions' => $this->get_form_conditions($form_id),
                     'i18n' => [
-                        'addRule' => __('Add Rule', 'simple-cf7-conditional'),
-                        'deleteRule' => __('Delete rule', 'simple-cf7-conditional'),
-                        'noRules' => __('No rules yet. Click "Add Rule" to get started.', 'simple-cf7-conditional'),
-                        'conditionalRule' => __('Conditional Rule', 'simple-cf7-conditional'),
-                        'showGroup' => __('Show Group', 'simple-cf7-conditional'),
-                        'whenField' => __('When Field', 'simple-cf7-conditional'),
-                        'condition' => __('Condition', 'simple-cf7-conditional'),
-                        'value' => __('Value', 'simple-cf7-conditional'),
-                        'selectGroup' => __('-- Select group --', 'simple-cf7-conditional'),
-                        'selectField' => __('-- Select field --', 'simple-cf7-conditional'),
-                        'enterValue' => __('Enter value...', 'simple-cf7-conditional'),
-                        'simpleConditionalFields' => __('Simple Conditional Fields', 'simple-cf7-conditional'),
+                        'addRule' => __('Add Rule', 'simple-conditional-fields-for-contact-form-7'),
+                        'deleteRule' => __('Delete rule', 'simple-conditional-fields-for-contact-form-7'),
+                        'noRules' => __('No rules yet. Click "Add Rule" to get started.', 'simple-conditional-fields-for-contact-form-7'),
+                        'conditionalRule' => __('Conditional Rule', 'simple-conditional-fields-for-contact-form-7'),
+                        'showGroup' => __('Show Group', 'simple-conditional-fields-for-contact-form-7'),
+                        'whenField' => __('When Field', 'simple-conditional-fields-for-contact-form-7'),
+                        'condition' => __('Condition', 'simple-conditional-fields-for-contact-form-7'),
+                        'value' => __('Value', 'simple-conditional-fields-for-contact-form-7'),
+                        'selectGroup' => __('-- Select group --', 'simple-conditional-fields-for-contact-form-7'),
+                        'selectField' => __('-- Select field --', 'simple-conditional-fields-for-contact-form-7'),
+                        'enterValue' => __('Enter value...', 'simple-conditional-fields-for-contact-form-7'),
+                        'simpleConditionalFields' => __('Simple Conditional Fields', 'simple-conditional-fields-for-contact-form-7'),
                         // Operators
-                        'equals' => __('equals', 'simple-cf7-conditional'),
-                        'notEquals' => __('not equals', 'simple-cf7-conditional'),
-                        'contains' => __('contains', 'simple-cf7-conditional'),
-                        'notContains' => __('does not contain', 'simple-cf7-conditional'),
-                        'isEmpty' => __('is empty', 'simple-cf7-conditional'),
-                        'notEmpty' => __('is not empty', 'simple-cf7-conditional'),
-                        'greaterThan' => __('greater than', 'simple-cf7-conditional'),
-                        'lessThan' => __('less than', 'simple-cf7-conditional'),
-                        'pleaseEnterGroupName' => __('Please enter a group name', 'simple-cf7-conditional')
+                        'equals' => __('equals', 'simple-conditional-fields-for-contact-form-7'),
+                        'notEquals' => __('not equals', 'simple-conditional-fields-for-contact-form-7'),
+                        'contains' => __('contains', 'simple-conditional-fields-for-contact-form-7'),
+                        'notContains' => __('does not contain', 'simple-conditional-fields-for-contact-form-7'),
+                        'isEmpty' => __('is empty', 'simple-conditional-fields-for-contact-form-7'),
+                        'notEmpty' => __('is not empty', 'simple-conditional-fields-for-contact-form-7'),
+                        'greaterThan' => __('greater than', 'simple-conditional-fields-for-contact-form-7'),
+                        'lessThan' => __('less than', 'simple-conditional-fields-for-contact-form-7'),
+                        'pleaseEnterGroupName' => __('Please enter a group name', 'simple-conditional-fields-for-contact-form-7')
                     ],
                     'nonce' => wp_create_nonce('scf7c_admin_nonce'),
                     'ajax_url' => admin_url('admin-ajax.php')
@@ -118,7 +118,7 @@ class SimpleCF7Conditional_Admin
             }
 
             // Build title with count if there are conditions
-            $title = __('Simple Conditional Fields', 'simple-cf7-conditional');
+            $title = __('Simple Conditional Fields', 'simple-conditional-fields-for-contact-form-7');
             if ($conditions_count > 0) {
                 $title .= ' (' . $conditions_count . ')';
             }
@@ -141,22 +141,22 @@ class SimpleCF7Conditional_Admin
         ?>
         <div class="scf7c-panel">
             <div class="scf7c-header">
-                <h2><?php esc_html_e('Simple Conditional Fields', 'simple-cf7-conditional'); ?></h2>
-                <p><?php esc_html_e('Create visual rules to show/hide groups of fields', 'simple-cf7-conditional'); ?></p>
+                <h2><?php esc_html_e('Simple Conditional Fields', 'simple-conditional-fields-for-contact-form-7'); ?></h2>
+                <p><?php esc_html_e('Create visual rules to show/hide groups of fields', 'simple-conditional-fields-for-contact-form-7'); ?></p>
             </div>
 
             <div class="scf7c-workspace">
                 <!-- Sidebar with available groups and fields -->
                 <div class="scf7c-sidebar">
-                    <h3><?php esc_html_e('Available Elements', 'simple-cf7-conditional'); ?></h3>
+                    <h3><?php esc_html_e('Available Elements', 'simple-conditional-fields-for-contact-form-7'); ?></h3>
 
                     <div class="scf7c-groups-list">
-                        <h4><?php esc_html_e('Groups', 'simple-cf7-conditional'); ?></h4>
+                        <h4><?php esc_html_e('Groups', 'simple-conditional-fields-for-contact-form-7'); ?></h4>
                         <div id="scf7c-available-groups"></div>
                     </div>
 
                     <div class="scf7c-fields-list">
-                        <h4><?php esc_html_e('Fields', 'simple-cf7-conditional'); ?></h4>
+                        <h4><?php esc_html_e('Fields', 'simple-conditional-fields-for-contact-form-7'); ?></h4>
                         <div id="scf7c-available-fields"></div>
                     </div>
                 </div>
@@ -164,17 +164,17 @@ class SimpleCF7Conditional_Admin
                 <!-- Main canvas -->
                 <div class="scf7c-canvas">
                     <div class="scf7c-canvas-header">
-                        <h3><?php esc_html_e('Conditional Rules', 'simple-cf7-conditional'); ?></h3>
+                        <h3><?php esc_html_e('Conditional Rules', 'simple-conditional-fields-for-contact-form-7'); ?></h3>
                         <button type="button" id="scf7c-add-rule" class="scf7c-btn-primary">
                             <span class="dashicons dashicons-plus-alt"></span>
-                            <?php esc_html_e('Add Rule', 'simple-cf7-conditional'); ?>
+                            <?php esc_html_e('Add Rule', 'simple-conditional-fields-for-contact-form-7'); ?>
                         </button>
                     </div>
 
                     <div id="scf7c-rules-container" class="scf7c-rules-area">
                         <div class="scf7c-empty-canvas">
                             <div class="scf7c-empty-icon">📋</div>
-                            <p><?php esc_html_e('No rules yet. Click "Add Rule" to get started.', 'simple-cf7-conditional'); ?></p>
+                            <p><?php esc_html_e('No rules yet. Click "Add Rule" to get started.', 'simple-conditional-fields-for-contact-form-7'); ?></p>
                         </div>
                     </div>
                 </div>

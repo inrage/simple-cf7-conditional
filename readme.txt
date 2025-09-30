@@ -180,8 +180,8 @@ Initial release of Simple Conditional Fields for Contact Form 7. A fresh approac
 
 For support, feature requests, or bug reports:
 
-* **Support Forum**: [WordPress.org Support](https://wordpress.org/support/plugin/simple-cf7-conditional)
-* **GitHub Issues**: [Report bugs or request features](https://github.com/inrage/simple-cf7-conditional/issues)
+* **Support Forum**: [WordPress.org Support](https://wordpress.org/support/plugin/simple-conditional-fields-for-contact-form-7)
+* **GitHub Issues**: [Report bugs or request features](https://github.com/inrage/simple-conditional-fields-for-contact-form-7/issues)
 * **Contact**: contact@inrage.fr
 
 == Contributing ==

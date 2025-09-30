@@ -3,10 +3,10 @@
  * Plugin Name: Simple Conditional Fields for Contact Form 7
  * Plugin URI: https://www.inrage.fr
  * Description: A simple and intuitive plugin to add conditional fields to Contact Form 7 forms with visual interface.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Pascal GAULT - inRage
  * Author URI: https://www.inrage.fr
- * Text Domain: simple-cf7-conditional
+ * Text Domain: simple-conditional-fields-for-contact-form-7
  * Domain Path: /languages
  * Requires at least: 5.0
  * Tested up to: 6.8
@@ -96,7 +96,7 @@ class SimpleCF7Conditional
         if (class_exists('WPCF7_TagGenerator')) {
             add_action('wpcf7_admin_init', function() {
                 $tag_generator = WPCF7_TagGenerator::get_instance();
-                $tag_generator->add('group', __('group', 'simple-cf7-conditional'),
+                $tag_generator->add('group', __('group', 'simple-conditional-fields-for-contact-form-7'),
                     [$this, 'group_tag_generator']);
             }, 50);
         }
@@ -133,7 +133,7 @@ class SimpleCF7Conditional
                     <tbody>
                         <tr>
                             <th scope="row">
-                                <label for="<?php echo esc_attr($args['content'] . '-name'); ?>"><?php echo esc_html(__('Name', 'simple-cf7-conditional')); ?></label>
+                                <label for="<?php echo esc_attr($args['content'] . '-name'); ?>"><?php echo esc_html(__('Name', 'simple-conditional-fields-for-contact-form-7')); ?></label>
                             </th>
                             <td>
                                 <input type="text" name="name" class="tg-name oneline" id="<?php echo esc_attr($args['content'] . '-name'); ?>" />
@@ -147,13 +147,13 @@ class SimpleCF7Conditional
         <div class="insert-box">
             <input type="text" name="group" class="tag code" readonly="readonly" onfocus="this.select()" />
             <div class="submitbox">
-                <input type="button" class="button button-primary insert-tag" value="<?php echo esc_attr(__('Insert Tag', 'simple-cf7-conditional')); ?>" />
+                <input type="button" class="button button-primary insert-tag" value="<?php echo esc_attr(__('Insert Tag', 'simple-conditional-fields-for-contact-form-7')); ?>" />
             </div>
             <br class="clear" />
             <p class="description">
                 <label for="<?php echo esc_attr($args['content'] . '-values'); ?>"><?php
                     /* translators: %s: HTML code example showing group syntax */
-                    echo sprintf(esc_html(__('To make fields inside this group conditional, wrap them like this: %s', 'simple-cf7-conditional')), '<br><code>' . esc_html('[group my-group]...[/group]') . '</code>'); ?></label>
+                    echo sprintf(esc_html(__('To make fields inside this group conditional, wrap them like this: %s', 'simple-conditional-fields-for-contact-form-7')), '<br><code>' . esc_html('[group my-group]...[/group]') . '</code>'); ?></label>
             </p>
         </div>
         <?php
@@ -170,8 +170,8 @@ class SimpleCF7Conditional
                 <?php
                 printf(
                     /* translators: %s: Plugin name */
-                    esc_html__('%s requires Contact Form 7 plugin to be installed and activated.', 'simple-cf7-conditional'),
-                    '<strong>' . esc_html__('Simple Conditional Fields for Contact Form 7', 'simple-cf7-conditional') . '</strong>'
+                    esc_html__('%s requires Contact Form 7 plugin to be installed and activated.', 'simple-conditional-fields-for-contact-form-7'),
+                    '<strong>' . esc_html__('Simple Conditional Fields for Contact Form 7', 'simple-conditional-fields-for-contact-form-7') . '</strong>'
                 );
                 ?>
             </p>

@@ -14,7 +14,7 @@ msgstr ""
 "POT-Creation-Date: 2025-01-25 12:00+0000\n"
 "PO-Revision-Date: 2025-01-25 12:00+0000\n"
 "X-Generator: WordPress\n"
-"X-Domain: simple-cf7-conditional\n"
+"X-Domain: simple-conditional-fields-for-contact-form-7\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: includes/class-admin.php:82 includes/class-admin.php:105
@@ -49,31 +49,31 @@ msgstr "Ajouter une Règle"
 msgid "No rules yet. Click \"Add Rule\" to get started."
 msgstr "Aucune règle pour le moment. Cliquez sur \"Ajouter une Règle\" pour commencer."
 
-#: simple-cf7-conditional.php:98
+#: simple-conditional-fields-for-contact-form-7.php:98
 msgid "group"
 msgstr "groupe"
 
-#: simple-cf7-conditional.php:135
+#: simple-conditional-fields-for-contact-form-7.php:135
 msgid "Name"
 msgstr "Nom"
 
-#: simple-cf7-conditional.php:149
+#: simple-conditional-fields-for-contact-form-7.php:149
 msgid "Insert Tag"
 msgstr "Insérer le Tag"
 
-#: simple-cf7-conditional.php:191
+#: simple-conditional-fields-for-contact-form-7.php:191
 msgid "Please enter a group name"
 msgstr "Veuillez saisir un nom de groupe"
 
-#: simple-cf7-conditional.php:153
+#: simple-conditional-fields-for-contact-form-7.php:153
 msgid "To make fields inside this group conditional, wrap them like this: %s"
 msgstr "Pour rendre les champs de ce groupe conditionnels, entourez-les comme ceci : %s"
 
-#: simple-cf7-conditional.php:170
+#: simple-conditional-fields-for-contact-form-7.php:170
 msgid "%s requires Contact Form 7 plugin to be installed and activated."
 msgstr "%s nécessite que l'extension Contact Form 7 soit installée et activée."
 
-#: simple-cf7-conditional.php:171
+#: simple-conditional-fields-for-contact-form-7.php:171
 #. Plugin Name of the plugin/theme
 msgid "Simple Conditional Fields for Contact Form 7"
 msgstr "Champs Conditionnels Simples pour Contact Form 7"
