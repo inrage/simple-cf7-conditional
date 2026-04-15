@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Simple Conditional Fields for Contact Form 7
  * Description: A simple and intuitive plugin to add conditional fields to Contact Form 7 forms with visual interface.
- * Version: 1.0.1
+ * Version: 1.0.2
  * Author: Pascal GAULT - inRage
  * Author URI: https://www.inrage.fr
  * Text Domain: simple-conditional-fields-for-contact-form-7
@@ -20,7 +20,7 @@ if (!defined('ABSPATH')) {
 }
 
 // Plugin constants
-define('SCF7C_VERSION', '1.0.0');
+define('SCF7C_VERSION', '1.0.2');
 define('SCF7C_PLUGIN_FILE', __FILE__);
 define('SCF7C_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('SCF7C_PLUGIN_URL', plugin_dir_url(__FILE__));
@@ -64,6 +64,7 @@ class SimpleCF7Conditional
         require_once SCF7C_PLUGIN_DIR . 'includes/class-admin.php';
         require_once SCF7C_PLUGIN_DIR . 'includes/class-frontend.php';
         require_once SCF7C_PLUGIN_DIR . 'includes/class-conditions.php';
+        require_once SCF7C_PLUGIN_DIR . 'includes/class-validation.php';
     }
 
     /**
@@ -78,6 +79,9 @@ class SimpleCF7Conditional
 
         // Initialize frontend
         new SimpleCF7Conditional_Frontend();
+
+        // Initialize server-side validation handler
+        new SimpleCF7Conditional_Validation();
 
         // Add group shortcode
         $this->add_group_shortcode();

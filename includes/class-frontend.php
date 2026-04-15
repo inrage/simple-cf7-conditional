@@ -60,9 +60,10 @@ class SimpleCF7Conditional_Frontend
                     'form_id' => $form_id
                 ));
 
-                // Add hidden input for form identification
+                // Add hidden input for form identification and hidden groups tracking
                 $properties['form'] = $properties['form'] . sprintf(
-                    '<input type="hidden" name="scf7c_form_id" value="%d">',
+                    '<input type="hidden" name="scf7c_form_id" value="%d">' .
+                    '<input type="hidden" name="_scf7c_hidden_groups" value="" data-scf7c-hidden-groups="1">',
                     absint($form_id)
                 );
             }

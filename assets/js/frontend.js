@@ -123,6 +123,8 @@
                 }
             });
 
+            const hiddenGroups = [];
+
             Object.keys(groupStates).forEach(fieldName => {
                 const $showField = this.getFieldElement($form, fieldName);
                 if ($showField.length) {
@@ -130,9 +132,21 @@
                         this.showField($showField);
                     } else {
                         this.hideField($showField);
+                        if ($showField.is('[data-scf7c-group]')) {
+                            hiddenGroups.push(fieldName);
+                        }
                     }
                 }
             });
+
+            this.updateHiddenGroupsField($form, hiddenGroups);
+        },
+
+        updateHiddenGroupsField: function($form, hiddenGroups) {
+            const $input = $form.find('input[data-scf7c-hidden-groups="1"]').first();
+            if ($input.length) {
+                $input.val(hiddenGroups.join(','));
+            }
         },
 
         // Apply single condition
